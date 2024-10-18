@@ -8,7 +8,7 @@
     'summary': 'Gestión de tickets para el área de sistemas',
     'author': 'Sergio Martinez Meneses',
     'website': 'https://sergiommq.github.io/portafolio/',
-    'category': 'Herramientas',
+    'category': 'Soporte Técnico',
     'version': '1.0.0',
     'description': """El Sistema de Tickets para Odoo 17 permite a las empresas gestionar solicitudes, problemas y tareas de manera organizada y eficiente. Con una interfaz intuitiva, flujo de trabajo flexible y seguimiento de actividades detallado, este módulo es la solución ideal para equipos técnicos y de soporte. Categoriza, asigna y resuelve tickets rápidamente, mejorando la productividad y garantizando un historial claro de todas las interacciones.""",
     'depends': ['base'],
