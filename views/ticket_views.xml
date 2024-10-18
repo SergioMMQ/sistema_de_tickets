@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="view_ticket_kanban" model="ir.ui.view">
+        <field name="name">ticket.system.kanban</field>
+        <field name="model">ticket.system</field>
+        <field name="arch" type="xml">
+            <kanban string="Tickets" 
+                    default_group_by="state"
+                    class="o_kanban_small_column"
+                    sample="1">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_module_vignette">
+                                <div class="oe_module_desc">
+                                    <div>
+                                        <strong class="o_kanban_record_title">
+                                            <field name="name" nolimit="1"/>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="ticket_system_search_view" model="ir.ui.view">
+        <field name="name">ticket.system.search</field>
+        <field name="model">ticket.system</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter string="Abierto" name="filter_open" domain="[('state', '=', 'open')]"/>
+                <filter string="En Proceso" name="filter_in_progress" domain="[('state', '=', 'in_progress')]"/>
+                <filter string="Cerrado" name="filter_closed" domain="[('state', '=', 'closed')]"/>
+                <group expand="1" string="Agrupar Por">
+                    <filter string="Estado" name="group_by_state" context="{'group_by': 'state'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_ticket_tree" model="ir.ui.view">
+        <field name="name">ticket.system.tree</field>
+        <field name="model">ticket.system</field>
+        <field name="arch" type="xml">
+            <tree string="Tickets">
+                <field name="state" widget="statusbar"/>
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="user_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ticket_form" model="ir.ui.view">
+        <field name="name">ticket.system.form</field>
+        <field name="model">ticket.system</field>
+        <field name="arch" type="xml">
+            <form string="Ticket">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button name="action_progress" type="object" string="En Progreso" class="btn-primary"/>
+                    <button name="action_close" type="object" string="Cerrado" class="btn-secondary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="category_id"/>
+                        <field name="user_id"/>
+                        <field name="state"/>
+                    </group>
+                    <notebook>
+                        <page string="Historial">
+                            <field name="history_ids">
+                                <tree>
+                                    <field name="message"/>
+                                    <field name="create_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_ticket_category_tree" model="ir.ui.view">
+        <field name="name">ticket.category.tree</field>
+        <field name="model">ticket.category</field>
+        <field name="arch" type="xml">
+            <tree string="Categorías">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ticket_category_form" model="ir.ui.view">
+        <field name="name">ticket.category.form</field>
+        <field name="model">ticket.category</field>
+        <field name="arch" type="xml">
+            <form string="Categoría">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ticket_category" model="ir.actions.act_window">
+        <field name="name">Categorías</field>
+        <field name="res_model">ticket.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_ticket_system" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">ticket.system</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+</odoo>

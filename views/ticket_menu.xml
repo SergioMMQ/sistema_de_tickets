@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+    <data>
+        <menuitem 
+            id="menu_ticket_root" 
+            name="Sistema de Tickets" 
+            web_icon="sistema_de_tickets,static/description/icon.png" 
+            sequence="10"/>
+        <menuitem 
+            id="menu_ticket_system" 
+            name="Tickets" 
+            parent="menu_ticket_root" 
+            action="action_ticket_system" 
+            sequence="10"/>
+        <menuitem 
+            id="menu_ticket_category" 
+            name="Categorías" 
+            parent="menu_ticket_root" 
+            action="action_ticket_category" 
+            sequence="20"/>
+    </data>
+</odoo>

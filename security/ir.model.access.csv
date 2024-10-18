@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ticket_system,access_ticket_system,model_ticket_system,,1,1,1,1
+access_ticket_category,access_ticket_category,model_ticket_category,,1,1,1,1
+access_ticket_history,access_ticket_history,model_ticket_history,,1,1,1,1
