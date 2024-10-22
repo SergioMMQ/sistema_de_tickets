@@ -24,4 +24,5 @@
     'price': 90,
     'currency': 'USD',
     'support': 'quetzal.mq97@gmail.com',
+    'description_file': 'description/index.html',
 }
