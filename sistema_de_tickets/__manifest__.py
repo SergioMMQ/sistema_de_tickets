@@ -7,10 +7,12 @@
     'name': 'Sistema de Tickets',
     'summary': 'Gestión de tickets para el área de sistemas',
     'author': 'Sergio Martinez Meneses',
+    'company': 'quetzalcode',
+    'maintainer': 'Sergio Martinez Meneses',
     'website': 'https://sergiommq.github.io/portafolio/',
     'category': 'Soporte Técnico',
     'version': '1.0.0',
-    'description': """Ver descripción completa en el archivo HTML""",
+    'description': "El Sistema de Tickets es una solución completa para gestionar solicitudes, problemas y tareas de manera organizada y eficiente. Con una interfaz intuitiva y un flujo de trabajo flexible",
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
@@ -24,5 +26,4 @@
     'price': 90,
     'currency': 'USD',
     'support': 'quetzal.mq97@gmail.com',
-    'description_file': 'description/index.html',
 }
