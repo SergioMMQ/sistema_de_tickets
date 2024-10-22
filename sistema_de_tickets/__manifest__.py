@@ -11,8 +11,14 @@
     'category': 'Soporte Técnico',
     'version': '1.0.0',
     'description': """
-    
-    <h2>Sistema de Tickets para Odoo 17</h2> <p>El <strong>Sistema de Tickets</strong> es una solución integral diseñada para optimizar la gestión de solicitudes, problemas y tareas en el ámbito tecnológico. Este módulo permite a los equipos de soporte técnico organizar, priorizar y resolver tickets de manera eficiente, mejorando la productividad y la satisfacción del usuario final.</p> <h3>Características Principales:</h3> <ul> <li><strong>Interfaz Intuitiva:</strong> Navega fácilmente por la plataforma con un diseño amigable que permite a los usuarios crear y gestionar tickets sin complicaciones.</li> <li><strong>Flujo de Trabajo Flexible:</strong> Adapta el flujo de trabajo a las necesidades de tu equipo, permitiendo una personalización en la asignación y seguimiento de tickets.</li> <li><strong>Categorización de Tickets:</strong> Clasifica las solicitudes según su naturaleza, facilitando la organización y el acceso a información relevante.</li> <li><strong>Asignación de Responsables:</strong> Distribuye tareas entre miembros del equipo de soporte, asegurando que cada ticket sea atendido por la persona adecuada.</li> <li><strong>Historial de Actividades:</strong> Mantén un registro detallado de todas las interacciones y acciones realizadas en cada ticket, lo que permite un seguimiento claro y efectivo.</li> </ul> <h3>Beneficios:</h3> <p>Implementar el <strong>Sistema de Tickets</strong> no solo mejora la eficiencia operativa, sino que también potencia la capacidad de respuesta ante incidencias, promoviendo un ambiente de trabajo más colaborativo y productivo.</p> <p>Con este módulo, las empresas pueden garantizar que cada solicitud sea tratada con la atención necesaria, mejorando la comunicación entre los usuarios y el equipo de soporte.</p>
+    <p><strong>Sistema de Tickets para Odoo 17</strong></p>
+    <p>El Sistema de Tickets es una solución completa para gestionar solicitudes, problemas y tareas de manera organizada y eficiente. Con una interfaz intuitiva y un flujo de trabajo flexible, este módulo permite:</p>
+    <ul>
+        <li>Categorizar, asignar y gestionar tickets de soporte técnico.</li>
+        <li>Seguir el progreso de cada ticket desde su creación hasta la resolución.</li>
+        <li>Mantener un historial detallado de actividades para cada ticket.</li>
+    </ul>
+    <p>Ideal para equipos técnicos y de soporte, mejora la productividad al centralizar la gestión de tareas en un solo lugar. ¡Optimiza tu flujo de trabajo y garantiza una atención rápida y eficaz!</p>
     """,
     'depends': ['base'],
     'data': [
